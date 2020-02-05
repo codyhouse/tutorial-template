@@ -9,10 +9,12 @@
   },
   "author": "Amber Creative <info@ambercreative.co>",
   "devDependencies": {
+    "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
     "codyhouse-framework": "^2.4.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2"
   },
   "homepage": "https://codyhouse.co"

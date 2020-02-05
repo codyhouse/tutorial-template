@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var postcss      = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 
 // css file paths
@@ -17,6 +19,7 @@ function reload(done) {
 gulp.task('sass', function() {
   return gulp.src(scssFilesPath)
   .pipe(sass().on('error', sass.logError))
+  .pipe(postcss([autoprefixer()]))
   .pipe(gulp.dest(cssFolder))
   .pipe(browserSync.reload({
     stream: true
